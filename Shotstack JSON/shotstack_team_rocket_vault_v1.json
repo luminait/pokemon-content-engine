@@ -1,0 +1,1222 @@
+{
+  "timeline": {
+    "fonts": [
+      {
+        "src": "https://fonts.gstatic.com/s/chicle/v25/lJwG-pw9i2dqU-Bzzmiq.ttf"
+      },
+      {
+        "src": "https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs8.ttf"
+      },
+      {
+        "src": "https://fonts.gstatic.com/s/barlowcondensed/v12/HTx3L3I-JCGChYJ8VI-L6OO_au7B6xHT3w.ttf"
+      },
+      {
+        "src": "https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs8.ttf"
+      },
+      {
+        "src": "https://fonts.gstatic.com/s/42dotsans/v2/BXR7vFK-2v7FnQ1xTYUJy2T9rRBKbpqjqRjZYnNVe3w.ttf"
+      },
+      {
+        "src": "https://fonts.gstatic.com/s/balsamiqsans/v14/P5sEzZiAbNrN8SB3lQQX7Pncwd4XJQ.ttf"
+      }
+    ],
+    "background": "#FFFFFF",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "length": "auto",
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxw-yfcpd-pg2yv-bq0ea-9wtn1z/source.jpg"
+            },
+            "start": 18.1627
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 30,
+            "asset": {
+              "type": "caption",
+              "src": "alias://40c703d9",
+              "font": {
+                "color": "#ffffff",
+                "family": "Montserrat ExtraBold",
+                "size": "30",
+                "lineHeight": 1.4,
+                "opacity": 0.79
+              },
+              "background": {
+                "padding": 20,
+                "opacity": 0.59,
+                "color": "#797225"
+              }
+            },
+            "start": 0.01,
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 30,
+            "asset": {
+              "type": "video",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jx6-6gnra-cf1qg-jhqkn-t03czm/source.mp4",
+              "volume": 1
+            },
+            "start": 0,
+            "offset": {
+              "x": 0.316,
+              "y": -0.405
+            },
+            "scale": 0.159,
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "{{FOOTER_MESSAGE_2}}",
+              "alignment": {
+                "horizontal": "left",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Montserrat SemiBold",
+                "size": "40",
+                "lineHeight": 1
+              },
+              "width": 470,
+              "height": 72
+            },
+            "start": 0,
+            "length": 30,
+            "offset": {
+              "x": -0.205,
+              "y": -0.432
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "{{FOOTER_MESSAGE_1}} ",
+              "alignment": {
+                "horizontal": "left",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Montserrat SemiBold",
+                "size": "40",
+                "lineHeight": 1
+              },
+              "width": 540,
+              "height": 72
+            },
+            "start": 0,
+            "length": 30,
+            "offset": {
+              "x": -0.173,
+              "y": -0.4
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "@deezcollectibles",
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Montserrat SemiBold",
+                "size": "40",
+                "lineHeight": 1
+              },
+              "width": 400,
+              "height": 72
+            },
+            "start": 0,
+            "length": 30,
+            "offset": {
+              "x": -0.253,
+              "y": -0.339
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "Join us on ",
+              "alignment": {
+                "horizontal": "left",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Montserrat SemiBold",
+                "size": "70",
+                "lineHeight": 1
+              },
+              "width": 400,
+              "height": 72
+            },
+            "start": 0,
+            "length": 30,
+            "offset": {
+              "x": -0.237,
+              "y": -0.292
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "{{ HEADER_TITLE }}",
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Balsamiq Sans",
+                "size": "91",
+                "lineHeight": 1,
+                "opacity": 0.71
+              },
+              "width": 886,
+              "height": 200,
+              "background": {
+                "color": "#fbe131",
+                "opacity": 0.5,
+                "borderRadius": 100
+              }
+            },
+            "start": 0,
+            "length": 15.26,
+            "offset": {
+              "x": 0,
+              "y": 0.392
+            },
+            "position": "center"
+          },
+          {
+            "asset": {
+              "type": "text",
+              "text": "{{ FINAL_CTA }}",
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Balsamiq Sans",
+                "size": "91",
+                "lineHeight": 1,
+                "opacity": 0.71
+              },
+              "width": 886,
+              "height": 500,
+              "background": {
+                "color": "#fbe131",
+                "opacity": 0.5,
+                "borderRadius": 100
+              }
+            },
+            "start": 15.27,
+            "length": 14.71,
+            "offset": {
+              "x": 0,
+              "y": 0.315
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 30,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jwz-75vv1-9d5gx-m3nsf-83htyv/source.png"
+            },
+            "start": 0,
+            "scale": 0.056,
+            "offset": {
+              "x": 0.193,
+              "y": -0.292
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "shape",
+              "shape": "rectangle",
+              "fill": {
+                "color": "#fbe131",
+                "opacity": 1
+              },
+              "stroke": {
+                "color": "#000000",
+                "width": 0
+              },
+              "width": 1185,
+              "height": 526,
+              "rectangle": {
+                "width": 1185,
+                "height": 526,
+                "cornerRadius": 0
+              }
+            },
+            "start": 0,
+            "length": 30,
+            "offset": {
+              "x": -0.007,
+              "y": -0.372
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 2.97,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-tmwbz-0ya4w-d0dgg-gy6js2/source.png"
+            },
+            "start": 9.62,
+            "scale": 0.39,
+            "transition": {
+              "in": "fadeSlow"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 1.99,
+            "asset": {
+              "type": "audio",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-xzqqq-xwt4p-4jpey-ge1q04/source.mp3",
+              "volume": 1
+            },
+            "start": 10.38
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "shape",
+              "shape": "rectangle",
+              "fill": {
+                "color": "#000000",
+                "opacity": 1
+              },
+              "stroke": {
+                "color": "#000000",
+                "width": 0
+              },
+              "width": 1080,
+              "height": 1919,
+              "rectangle": {
+                "width": 1080,
+                "height": 1919,
+                "cornerRadius": 0
+              }
+            },
+            "start": 9.01,
+            "length": 3.57,
+            "offset": {
+              "x": -0.001,
+              "y": 0.002
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 3.1,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-vqecq-8j87f-r6w2e-t3dqck/source.webp"
+            },
+            "start": 5.983,
+            "offset": {
+              "x": 0,
+              "y": 0.009
+            },
+            "scale": 0.505,
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": "auto",
+            "asset": {
+              "type": "audio",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-q0h1e-4bj2k-0khpd-5fvsf9/source.mp3",
+              "volume": 1
+            },
+            "start": 5.983
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 2.45,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-rh5hc-n1zgm-qcfzm-q3zstz/source.png"
+            },
+            "start": 3.43,
+            "offset": {
+              "x": 0.11,
+              "y": -0.12
+            },
+            "scale": 0.487,
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 1.99,
+            "asset": {
+              "type": "audio",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-q1565-d2wbn-250w5-p28jrp/source.mp3",
+              "volume": 1
+            },
+            "start": 3.64
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 3,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-rf9fq-kj3mc-33x1p-qkxk23/source.png"
+            },
+            "start": 0.29,
+            "offset": {
+              "x": -0.092,
+              "y": -0.135
+            },
+            "scale": 0.617,
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 2.22,
+            "asset": {
+              "type": "audio",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-q6675-40bgr-vfj6g-78m3bj/source.mp3",
+              "volume": 1
+            },
+            "start": 0.51
+          },
+          {
+            "length": 2.48,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jx6-7bnfq-wz03d-51xz8-anbdxc/source.png"
+            },
+            "start": 22.65,
+            "scale": [
+              {
+                "start": 0,
+                "length": 0.01,
+                "from": 1,
+                "to": 2,
+                "interpolation": "linear",
+                "easing": "linear"
+              },
+              {
+                "start": 0.01,
+                "length": 0.17,
+                "from": 2,
+                "to": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 0.18,
+                "length": 2.34,
+                "from": 0.5,
+                "to": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 2.52,
+                "length": 0.3,
+                "from": 0.5,
+                "to": 0.5,
+                "interpolation": "linear"
+              },
+              {
+                "start": 2.82,
+                "length": 0.17,
+                "from": 0.5,
+                "to": 0,
+                "interpolation": "linear"
+              }
+            ],
+            "offset": {
+              "x": [
+                {
+                  "start": 0,
+                  "length": 0.01,
+                  "from": 0,
+                  "to": 0.013,
+                  "interpolation": "linear",
+                  "easing": "linear"
+                },
+                {
+                  "start": 0.01,
+                  "length": 0.17,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 0.18,
+                  "length": 2.34,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.52,
+                  "length": 0.3,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.82,
+                  "length": 0.17,
+                  "from": 0.013,
+                  "to": -1.074,
+                  "interpolation": "linear"
+                }
+              ],
+              "y": [
+                {
+                  "start": 0,
+                  "length": 0.01,
+                  "from": 0,
+                  "to": 0.083,
+                  "interpolation": "linear",
+                  "easing": "linear"
+                },
+                {
+                  "start": 0.01,
+                  "length": 0.17,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 0.18,
+                  "length": 2.34,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.52,
+                  "length": 0.3,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.82,
+                  "length": 0.17,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                }
+              ]
+            },
+            "position": "center",
+            "opacity": [
+              {
+                "start": 0,
+                "length": 0.01,
+                "from": 1,
+                "to": 0,
+                "interpolation": "linear",
+                "easing": "linear"
+              },
+              {
+                "start": 0.01,
+                "length": 0.17,
+                "from": 0,
+                "to": 1,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 0.18,
+                "length": 2.34,
+                "from": 1,
+                "to": 1,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 2.52,
+                "length": 0.3,
+                "from": 1,
+                "to": 1,
+                "interpolation": "linear"
+              },
+              {
+                "start": 2.82,
+                "length": 0.17,
+                "from": 1,
+                "to": 1,
+                "interpolation": "linear"
+              }
+            ],
+            "transform": {
+              "rotate": {
+                "angle": [
+                  {
+                    "start": 0,
+                    "length": 0.01,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear",
+                    "easing": "linear"
+                  },
+                  {
+                    "start": 0.01,
+                    "length": 0.17,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 0.18,
+                    "length": 2.34,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 2.52,
+                    "length": 0.3,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 2.82,
+                    "length": 0.17,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 3,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-renditions.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jx6-76r8y-b0n33-bvjem-64qqw4/shotstack-proxy.webp"
+            },
+            "start": 19.92,
+            "scale": [
+              {
+                "start": 0,
+                "length": 0.01,
+                "from": 1,
+                "to": 2,
+                "interpolation": "linear",
+                "easing": "linear"
+              },
+              {
+                "start": 0.01,
+                "length": 0.17,
+                "from": 2,
+                "to": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 0.18,
+                "length": 2.34,
+                "from": 0.5,
+                "to": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 2.52,
+                "length": 0.3,
+                "from": 0.5,
+                "to": 0.5,
+                "interpolation": "linear"
+              },
+              {
+                "start": 2.82,
+                "length": 0.17,
+                "from": 0.5,
+                "to": 0,
+                "interpolation": "linear"
+              }
+            ],
+            "offset": {
+              "x": [
+                {
+                  "start": 0,
+                  "length": 0.01,
+                  "from": 0,
+                  "to": 0.013,
+                  "interpolation": "linear",
+                  "easing": "linear"
+                },
+                {
+                  "start": 0.01,
+                  "length": 0.17,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 0.18,
+                  "length": 2.34,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.52,
+                  "length": 0.3,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.82,
+                  "length": 0.17,
+                  "from": 0.013,
+                  "to": -1.074,
+                  "interpolation": "linear"
+                }
+              ],
+              "y": [
+                {
+                  "start": 0,
+                  "length": 0.01,
+                  "from": 0,
+                  "to": 0.083,
+                  "interpolation": "linear",
+                  "easing": "linear"
+                },
+                {
+                  "start": 0.01,
+                  "length": 0.17,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 0.18,
+                  "length": 2.34,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.52,
+                  "length": 0.3,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.82,
+                  "length": 0.17,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                }
+              ]
+            },
+            "position": "center",
+            "opacity": [
+              {
+                "start": 0,
+                "length": 0.01,
+                "from": 1,
+                "to": 0,
+                "interpolation": "linear",
+                "easing": "linear"
+              },
+              {
+                "start": 0.01,
+                "length": 0.17,
+                "from": 0,
+                "to": 1,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 0.18,
+                "length": 2.34,
+                "from": 1,
+                "to": 1,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 2.52,
+                "length": 0.3,
+                "from": 1,
+                "to": 1,
+                "interpolation": "linear"
+              },
+              {
+                "start": 2.82,
+                "length": 0.17,
+                "from": 1,
+                "to": 1,
+                "interpolation": "linear"
+              }
+            ],
+            "transform": {
+              "rotate": {
+                "angle": [
+                  {
+                    "start": 0,
+                    "length": 0.01,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear",
+                    "easing": "linear"
+                  },
+                  {
+                    "start": 0.01,
+                    "length": 0.17,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 0.18,
+                    "length": 2.34,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 2.52,
+                    "length": 0.3,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 2.82,
+                    "length": 0.17,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 3,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-renditions.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jx6-76r8y-b0n33-bvjem-64qqw4/shotstack-proxy.webp"
+            },
+            "start": 17.24,
+            "scale": [
+              {
+                "start": 0,
+                "length": 0.01,
+                "from": 1,
+                "to": 2,
+                "interpolation": "linear",
+                "easing": "linear"
+              },
+              {
+                "start": 0.01,
+                "length": 0.17,
+                "from": 2,
+                "to": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 0.18,
+                "length": 2.34,
+                "from": 0.5,
+                "to": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 2.52,
+                "length": 0.3,
+                "from": 0.5,
+                "to": 0.5,
+                "interpolation": "linear"
+              },
+              {
+                "start": 2.82,
+                "length": 0.17,
+                "from": 0.5,
+                "to": 0,
+                "interpolation": "linear"
+              }
+            ],
+            "offset": {
+              "x": [
+                {
+                  "start": 0,
+                  "length": 0.01,
+                  "from": 0,
+                  "to": 0.013,
+                  "interpolation": "linear",
+                  "easing": "linear"
+                },
+                {
+                  "start": 0.01,
+                  "length": 0.17,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 0.18,
+                  "length": 2.34,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.52,
+                  "length": 0.3,
+                  "from": 0.013,
+                  "to": 0.013,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.82,
+                  "length": 0.17,
+                  "from": 0.013,
+                  "to": -1.074,
+                  "interpolation": "linear"
+                }
+              ],
+              "y": [
+                {
+                  "start": 0,
+                  "length": 0.01,
+                  "from": 0,
+                  "to": 0.083,
+                  "interpolation": "linear",
+                  "easing": "linear"
+                },
+                {
+                  "start": 0.01,
+                  "length": 0.17,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 0.18,
+                  "length": 2.34,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.52,
+                  "length": 0.3,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                },
+                {
+                  "start": 2.82,
+                  "length": 0.17,
+                  "from": 0.083,
+                  "to": 0.083,
+                  "interpolation": "linear"
+                }
+              ]
+            },
+            "position": "center",
+            "opacity": [
+              {
+                "start": 0,
+                "length": 0.01,
+                "from": 1,
+                "to": 0,
+                "interpolation": "linear",
+                "easing": "linear"
+              },
+              {
+                "start": 0.01,
+                "length": 0.17,
+                "from": 0,
+                "to": 1,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 0.18,
+                "length": 2.34,
+                "from": 1,
+                "to": 1,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuart"
+              },
+              {
+                "start": 2.52,
+                "length": 0.3,
+                "from": 1,
+                "to": 1,
+                "interpolation": "linear"
+              },
+              {
+                "start": 2.82,
+                "length": 0.17,
+                "from": 1,
+                "to": 1,
+                "interpolation": "linear"
+              }
+            ],
+            "transform": {
+              "rotate": {
+                "angle": [
+                  {
+                    "start": 0,
+                    "length": 0.01,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear",
+                    "easing": "linear"
+                  },
+                  {
+                    "start": 0.01,
+                    "length": 0.17,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 0.18,
+                    "length": 2.34,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 2.52,
+                    "length": 0.3,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  },
+                  {
+                    "start": 2.82,
+                    "length": 0.17,
+                    "from": 0,
+                    "to": 0,
+                    "interpolation": "linear"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 10.27,
+            "asset": {
+              "type": "video",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jwz-ekzny-s518b-tvcgp-ztvkrw/source.mp4",
+              "trim": 100,
+              "volume": 1
+            },
+            "start": 16.84,
+            "offset": {
+              "x": 0.044,
+              "y": -0.025
+            },
+            "scale": 1.126,
+            "position": "center",
+            "transition": {
+              "in": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": "auto",
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-renditions.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-z5jq8-3n9za-mn321-hrpdph/shotstack-proxy.webp"
+            },
+            "start": 0.2749627976190477
+          },
+          {
+            "length": 2.55,
+            "asset": {
+              "type": "image",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-z63xe-bc6xc-p3hcj-whxrqh/source.png"
+            },
+            "start": 3.34,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 5.63,
+            "asset": {
+              "type": "video",
+              "src": "https://shotstack-ingest-api-v1-renditions.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-gnpa9-8kbpb-zswbj-2cvtcv/shotstack-proxy.mp4",
+              "volume": 1
+            },
+            "start": 0
+          },
+          {
+            "length": 4.05,
+            "asset": {
+              "type": "video",
+              "src": "https://shotstack-ingest-api-v1-renditions.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-gnpa9-8kbpb-zswbj-2cvtcv/shotstack-proxy.mp4",
+              "volume": 1
+            },
+            "start": 5.68
+          },
+          {
+            "length": 5.04,
+            "asset": {
+              "type": "video",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxr-zynqb-4v2s4-74sah-c1gqjq/source.mp4",
+              "volume": 1
+            },
+            "start": 12.48
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 30,
+            "asset": {
+              "type": "audio",
+              "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/nfvi6faca5/zzz01jxs-46396-9nvq3-nch9w-qj2ysf/source.m4a",
+              "volume": 0.25
+            },
+            "start": 0
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "fps": 25,
+    "size": {
+      "width": 1080,
+      "height": 1920
+    }
+  },
+  "merge": [
+    {
+      "find": "HEADER_TITLE",
+      "replace": "Catch'Em All Again"
+    },
+    {
+      "find": "FINAL_CTA",
+      "replace": "Catch'Em All Again  on WhatNot  @deezcollectibles"
+    },
+    {
+      "find": "FOOTER_MESSAGE_1",
+      "replace": "Team Rocket Saturdays"
+    },
+    {
+      "find": "FOOTER_MESSAGE_2",
+      "replace": "Starting at 1pm PST"
+    },
+    {
+      "find": "SLOT_1",
+      "replace": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRSbmm7zUYYNHvarEO5Ula5BwdP_fmU2-XqdK6XQpMC_3zaRyydY45p3Uiw7CAfGGgrxq3GY1Zpupxvw-fna_I0Z2KpaUHlKuAwT8pRw5oV9LpEcknxJCzJaQ"
+    }
+  ]
+}
