@@ -1,0 +1,808 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Universal Naming Conventions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="21a11a49-6fcb-8023-a520-cece7208db30" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🏷️</span></div><h1 class="page-title">Universal Naming Conventions</h1><p class="page-description"></p></header><div class="page-body"><p id="21a11a49-6fcb-8056-a948-e2cad5fe0258" class=""><strong>Deez Collectibles – Universal Content Generation Naming Guide</strong></p><h1 id="21a11a49-6fcb-801b-9d52-df35c8fc9176" class="">🏷️ Universal Naming Conventions</h1><p id="21a11a49-6fcb-80a8-84a9-f82f71109672" class="">For all campaigns within the Deez Collectibles automated content engine.</p><p id="21a11a49-6fcb-8053-8e0e-ff9504d383b7" class="">This document defines the file naming structure across AI, After Effects, Shotstack, and programmatic asset workflows. Following this guide ensures smooth automation, asset clarity, and efficient reuse across campaigns.</p><hr id="21a11a49-6fcb-802b-92ad-d429eb14d5f9"/><h2 id="21a11a49-6fcb-801c-b497-fc4d4cf90347" class="">🧰 General Format</h2><p id="21a11a49-6fcb-8094-aa60-c2b1b60b4c80" class="">Use lowercase only. Separate components with underscores. Avoid spaces or special characters. Always version your assets.</p><p id="21a11a49-6fcb-802b-893c-f500fdb08873" class=""><code>[prefix]</code><em><code>[subject]</code></em><code>[descriptor]_v[number].[ext]</code></p><h3 id="21a11a49-6fcb-80d4-9ce1-d564c0754e3e" class="">Example:</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21a11a49-6fcb-8077-bd12-e6b4d8938250" class="code"><code class="language-Markdown">char_giovanni_pose_angry_v1.png
+
+env_beachday_fg_surfboardrack_v1.png
+
+card_darkcharizard_holo_psa9_v1.png
+
+overlay_cardshowcase_base_2024-06-21.json
+
+scene_teamrocket_report_final_v2.mp4</code></pre><hr id="21a11a49-6fcb-8049-96cc-cd2985fff10e"/><hr id="21a11a49-6fcb-8092-972b-f22d2ddaa408"/><h2 id="21a11a49-6fcb-8070-a8b0-c065e2b1656d" class="">🔤 Prefix Reference Table</h2><table id="21a11a49-6fcb-8060-82dc-c3506facc2e1" class="simple-table"><tbody><tr id="21a11a49-6fcb-80e3-a176-ca5e01f028f9"><td id="pr@s" class="">Prefix</td><td id="eFDB" class="" style="width:192.91493225097656px">Asset Type</td><td id="&lt;e_{" class="" style="width:337.00001525878906px">Example File</td></tr><tr id="21a11a49-6fcb-805c-88be-c9748f4c4d29"><td id="pr@s" class=""><code>char_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Character Poses/Assets</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>char_meowth_react_surprise_v1.png</code></td></tr><tr id="21a11a49-6fcb-8018-9949-dc0d0acbe28a"><td id="pr@s" class=""><code>bg_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Flat Background Image</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>bg_campfire_nightglow_v2.jpg</code></td></tr><tr id="21a11a49-6fcb-8045-a4ac-ed72f6bd69bf"><td id="pr@s" class=""><code>prop_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Props &amp; Small Objects</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>prop_pokebriefcase_open_v1.png</code></td></tr><tr id="21a11a49-6fcb-8049-9cc8-dc4bb60d3f11"><td id="pr@s" class=""><code>card_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Pokémon Card Image</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>card_umbreon_holo_raw_v1.png</code></td></tr><tr id="21a11a49-6fcb-8051-8090-ec69da9195cb"><td id="pr@s" class=""><code>overlay_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Shotstack/AE Overlays</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>overlay_showreminder_2024-07-01.json</code></td></tr><tr id="21a11a49-6fcb-80fb-845b-c90bbd38fe4e"><td id="pr@s" class=""><code>scene_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Rendered Video</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>scene_beachparty_highlight_final_v2.mp4</code></td></tr><tr id="21a11a49-6fcb-8002-8d19-dc2d178aa426"><td id="pr@s" class=""><code>sfx_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Sound Effects</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>sfx_teamrocket_laugh_v1.wav</code></td></tr><tr id="21a11a49-6fcb-808b-99e7-d9f923aff938"><td id="pr@s" class=""><code>vo_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Voiceover Dialogue</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>vo_gengar_gradewarning_ep3.wav</code></td></tr><tr id="21a11a49-6fcb-80b3-b693-cb00ef60911e"><td id="pr@s" class=""><code>env_</code></td><td id="eFDB" class="" style="width:192.91493225097656px">Scene Layers (see below)</td><td id="&lt;e_{" class="" style="width:337.00001525878906px"><code>env_lab_mg_tube_slot2_v1.png</code></td></tr></tbody></table><hr id="21a11a49-6fcb-807a-a425-d74a12256407"/><h2 id="21a11a49-6fcb-8022-8afb-db3ea48e03ec" class="">🧱 Scene Construction Assets (Layered)</h2><p id="21a11a49-6fcb-8099-9f60-e95df22105c8" class="">Use <code>env_</code> prefix for any <strong>layered environment or insertable element</strong>, broken down into:</p><ul id="21a11a49-6fcb-8070-8110-d1c3d3aeb55e" class="bulleted-list"><li style="list-style-type:disc"><code>bg</code> = background</li></ul><ul id="21a11a49-6fcb-80d3-83f0-d1674fa1a042" class="bulleted-list"><li style="list-style-type:disc"><code>mg</code> = midground</li></ul><ul id="21a11a49-6fcb-8031-9a31-fd20d6d43832" class="bulleted-list"><li style="list-style-type:disc"><code>fg</code> = foreground</li></ul><ul id="21a11a49-6fcb-805c-9d45-c5770c81c2e0" class="bulleted-list"><li style="list-style-type:disc"><code>slotX</code> = insertion point (card, item, or character)</li></ul><h3 id="21a11a49-6fcb-809e-af87-c2c5ed8eec8a" class="">🎯 Naming Format:</h3><p id="21a11a49-6fcb-803b-8fe3-fff3a65cf54b" class=""><code>env_[scene]</code><em><code>[layer]</code></em><code>[descriptor]_v[number].[ext]</code></p><p id="21a11a49-6fcb-80c7-8566-c2379ca6a7fe" class="">
+</p><h3 id="21a11a49-6fcb-80d2-9c98-ce9fe84d9bf7" class="">🧪 Example: Rocket Lab Clone Scene</h3><p id="21a11a49-6fcb-802f-a2b8-e2439c46978b" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21a11a49-6fcb-8074-8835-dbfe6509e82a" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">env_rocketlab_bg_cleanroom_v1.png          → lab background
+env_rocketlab_fg_computers_v1.png          → monitors and interface
+env_rocketlab_mg_tube_slot1_v1.png         → leftmost tube with transparency
+env_rocketlab_mg_tube_slot2_v1.png         → center tube
+env_rocketlab_mg_tube_slot3_v1.png         → rightmost tube
+
+--- 
+
+Dynamically inserted:
+card_darkdragonite_holo_raw_v1.png         → inserted into slot2
+
+📌 Slot options:
+- `slot1`, `slot2`, `slot3` → simple L–R
+- `slotA1`, `slotB1`, etc. → grid
+- `slotL`, `slotC`, `slotR` → directional</code></pre><hr id="21a11a49-6fcb-80a5-8f2b-ce0dd0cc2693"/><h2 id="21a11a49-6fcb-80d7-82d9-fe5e5a3441f8" class="">🗂 Campaign + Template Integration</h2><p id="21a11a49-6fcb-8013-9de2-e19a14085f6d" class="">All assets are compatible across campaigns. Just change <code>[scene]</code> or <code>[descriptor]</code> for reuse:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21a11a49-6fcb-8089-be2f-f4fb7f6e3336" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">env_beachday_mg_slot1_v1.png
+
+env_professorstudy_mg_binder_slot2_v2.png</code></pre><hr id="21a11a49-6fcb-8019-a1f4-c498c01bc800"/><h2 id="21a11a49-6fcb-8092-9f22-ee79a14ebbf7" class="">🧠 Naming Tips</h2><ul id="21a11a49-6fcb-8049-923b-d7287099208e" class="bulleted-list"><li style="list-style-type:disc">Always use clear subject descriptors (<code>pose</code>, <code>slot</code>, <code>holo</code>, <code>clean</code>, <code>psaX</code>)</li></ul><ul id="21a11a49-6fcb-809f-bdc3-dd6209715a1f" class="bulleted-list"><li style="list-style-type:disc">Add <code>_final</code> tag before version if it&#x27;s production-ready</li></ul><ul id="21a11a49-6fcb-8016-8553-f5d8d046bb3a" class="bulleted-list"><li style="list-style-type:disc">Use <code>YYYY-MM-DD</code> in overlays or scheduled content files</li></ul><hr id="21a11a49-6fcb-8093-97fe-c8960d59a5ec"/><h2 id="21a11a49-6fcb-8094-ad94-fc8c4e102391" class="">🔁 Reusable Structure</h2><p id="21a11a49-6fcb-80eb-9cd0-fa96993466dc" class="">Works for all campaigns:</p><ul id="21a11a49-6fcb-8032-bbe5-d28f67c953d1" class="bulleted-list"><li style="list-style-type:disc">🌑 Team Rocket (&quot;Dark Intentions&quot;)</li></ul><ul id="21a11a49-6fcb-8018-b175-fd99d96cb3d5" class="bulleted-list"><li style="list-style-type:disc">🏖 Beach Day</li></ul><ul id="21a11a49-6fcb-8013-a34c-e309a34b773d" class="bulleted-list"><li style="list-style-type:disc">🔥 Campfire Chat</li></ul><ul id="21a11a49-6fcb-807f-8f69-fb9cdcfa2f5f" class="bulleted-list"><li style="list-style-type:disc">📚 Professor Binder</li></ul><ul id="21a11a49-6fcb-80b7-8c1d-d70c71c020ff" class="bulleted-list"><li style="list-style-type:disc">📣 Three-Card Teasers</li></ul><ul id="21a11a49-6fcb-80b1-91b6-c4a660af2725" class="bulleted-list"><li style="list-style-type:disc">❄️ Seasonal Events</li></ul><hr id="21a11a49-6fcb-80f0-8d50-cddc0685b31f"/><h2 id="21a11a49-6fcb-80aa-a2c6-ccd846981bc3" class="">✅ Sample Workflow Set</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21a11a49-6fcb-8076-b713-d4f5043b3ed5" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">char_james_pose_sideeye_v1.png
+env_rocketlab_mg_tube_slot2_v1.png
+card_darkcharizard_holo_psa9_v1.png
+overlay_cardspotlight_rocket_2024-06-28.json
+scene_rocket_showcase_final_v1.mp4</code></pre><hr id="21a11a49-6fcb-80cb-9fe2-d2d0128a5e80"/><p id="21a11a49-6fcb-80ad-bdd0-ecb607adbce7" class="">
+</p><h1 id="21a11a49-6fcb-803a-b505-d87c774f7cbd" class="">Naming Conventions JSON</h1><p id="21a11a49-6fcb-8042-91f5-fea410729460" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21a11a49-6fcb-8071-a119-f55e6476d88f" class="code"><code class="language-JSON">{
+  &quot;standard_format&quot;: &quot;[prefix]_[subject]_[descriptor]_v[number].[ext]&quot;,
+  &quot;versioning&quot;: {
+    &quot;example&quot;: &quot;scene_teamrocket_report_final_v2.mp4&quot;,
+    &quot;rules&quot;: [
+      &quot;Use lowercase only&quot;,
+      &quot;Separate components with underscores&quot;,
+      &quot;Use &#x27;v1&#x27;, &#x27;v2&#x27;, etc. for versioning&quot;,
+      &quot;Use &#x27;_final&#x27; before version for approved assets&quot;
+    ]
+  },
+  &quot;prefixes&quot;: {
+    &quot;char_&quot;: {
+      &quot;type&quot;: &quot;Character pose or static render&quot;,
+      &quot;example&quot;: &quot;char_meowth_react_surprise_v1.png&quot;
+    },
+    &quot;bg_&quot;: {
+      &quot;type&quot;: &quot;Static background&quot;,
+      &quot;example&quot;: &quot;bg_campfire_nightglow_v1.jpg&quot;
+    },
+    &quot;prop_&quot;: {
+      &quot;type&quot;: &quot;Single-use prop assets&quot;,
+      &quot;example&quot;: &quot;prop_pokebriefcase_open_v1.png&quot;
+    },
+    &quot;card_&quot;: {
+      &quot;type&quot;: &quot;Card image asset&quot;,
+      &quot;example&quot;: &quot;card_darkcharizard_holo_psa10_v2.png&quot;
+    },
+    &quot;overlay_&quot;: {
+      &quot;type&quot;: &quot;Overlay JSON or visual layers&quot;,
+      &quot;example&quot;: &quot;overlay_showcase_rocket_2024-07-01.json&quot;
+    },
+    &quot;scene_&quot;: {
+      &quot;type&quot;: &quot;Rendered video scenes&quot;,
+      &quot;example&quot;: &quot;scene_beachparty_highlight_final_v1.mp4&quot;
+    },
+    &quot;sfx_&quot;: {
+      &quot;type&quot;: &quot;Sound effects&quot;,
+      &quot;example&quot;: &quot;sfx_teamrocket_laugh_v1.wav&quot;
+    },
+    &quot;vo_&quot;: {
+      &quot;type&quot;: &quot;Voiceover files&quot;,
+      &quot;example&quot;: &quot;vo_gengar_tips_ep3.wav&quot;
+    },
+    &quot;env_&quot;: {
+      &quot;type&quot;: &quot;Layered environment elements&quot;,
+      &quot;example&quot;: &quot;env_rocketlab_mg_tube_slot1_v1.png&quot;
+    }
+  },
+  &quot;env_layers&quot;: {
+    &quot;usage_note&quot;: &quot;For layered scene construction with insertable slots&quot;,
+    &quot;format&quot;: &quot;env_[scene]_[layer]_[descriptor]_v[number].[ext]&quot;,
+    &quot;layers&quot;: {
+      &quot;bg&quot;: &quot;Background&quot;,
+      &quot;mg&quot;: &quot;Midground&quot;,
+      &quot;fg&quot;: &quot;Foreground&quot;,
+      &quot;slot1&quot;: &quot;Leftmost insert point&quot;,
+      &quot;slot2&quot;: &quot;Center insert point&quot;,
+      &quot;slot3&quot;: &quot;Rightmost insert point&quot;,
+      &quot;slotL&quot;: &quot;Directional: Left&quot;,
+      &quot;slotC&quot;: &quot;Directional: Center&quot;,
+      &quot;slotR&quot;: &quot;Directional: Right&quot;,
+      &quot;slotA1&quot;: &quot;Grid layout: Row A, Col 1&quot;
+    },
+    &quot;examples&quot;: [
+      &quot;env_beachday_fg_surfboards_v1.png&quot;,
+      &quot;env_rocketlab_mg_tube_slot2_v1.png&quot;,
+      &quot;env_professorstudy_mg_binder_slot1_v2.png&quot;
+    ]
+  },
+  &quot;naming_tips&quot;: [
+    &quot;Use only lowercase letters&quot;,
+    &quot;Avoid spaces or special characters&quot;,
+    &quot;Be descriptive but concise&quot;,
+    &quot;Use campaign-neutral names for reusable assets&quot;,
+    &quot;For date-specific content, include YYYY-MM-DD&quot;,
+    &quot;Mark production-ready files with _final before version&quot;
+  ],
+  &quot;reusable_campaigns&quot;: [
+    &quot;teamrocket&quot;,
+    &quot;beachday&quot;,
+    &quot;campfire&quot;,
+    &quot;professorbinder&quot;,
+    &quot;threecardshowcase&quot;,
+    &quot;seasonalevents&quot;
+  ],
+  &quot;sample_set&quot;: [
+    &quot;char_james_pose_sideeye_v1.png&quot;,
+    &quot;env_rocketlab_mg_tube_slot2_v1.png&quot;,
+    &quot;card_darkcharizard_holo_psa9_v1.png&quot;,
+    &quot;overlay_cardspotlight_rocket_2024-06-28.json&quot;,
+    &quot;scene_rocket_showcase_final_v1.mp4&quot;
+  ]
+}</code></pre></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
