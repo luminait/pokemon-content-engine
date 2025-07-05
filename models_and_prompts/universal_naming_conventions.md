@@ -28,17 +28,17 @@ scene_teamrocket_ep1_final_v1.mp4
 
 ## 🔤 Prefix Reference
 
-| Prefix | Type | Example |
-| --- | --- | --- |
-| `char_` | Character asset | `char_james_pose_sneaky_v1.png` |
-| `bg_` | Flat background image | `bg_beach_full_v1.jpg` |
-| `prop_` | Isolated prop or object | `prop_pokeball_glow_v1.png` |
-| `card_` | Card scan asset | `card_darkdragonite_holo_raw.png` |
-| `overlay_` | Dynamic overlay content | `overlay_auctioncountdown_2024-06-30.json` |
-| `scene_` | Final rendered video | `scene_rocket_hype_final_v2.mp4` |
-| `sfx_` | Sound effects | `sfx_lapras_splash_v1.wav` |
-| `vo_` | Voiceover audio | `vo_gengar_intro_ep1.wav` |
-| `env_` | Environment scene asset | See multi-layer support below |
+| Prefix                | Type                    | Example                                    |
+|-----------------------|-------------------------|--------------------------------------------|
+| `char_`               | Character asset         | `char_james_pose_sneaky_v1.png`            |
+| `prop_`               | Isolated prop or object | `prop_pokeball_glow_v1.png`                |
+| `card_`               | Card scan asset         | `card_darkdragonite_holo_raw.png`          |
+| `overlay_`            | Dynamic overlay content | `overlay_auctioncountdown_2024-06-30.json` |
+| `scene_`              | Final rendered video    | `scene_rocket_hype_final_v2.mp4`           |
+| `sfx_`                | Sound effects           | `sfx_lapras_splash_v1.wav`                 |
+| `vo_`                 | Voiceover audio         | `vo_gengar_intro_ep1.wav`                  |
+| `env_`                | Environment scene asset | See multi-layer support below              |
+| `campaign_blueprint_` | Campaign blueprint      | `campaign_blueprint_beachday.md`           |
 
 ---
 
@@ -48,28 +48,26 @@ To handle foreground, midground, and background depth with flexible ordering:
 
 ### Layer Codes:
 
-| Code | Meaning |
-| --- | --- |
-| `bg` | Background |
-| `mg1` | Midground layer 1 |
-| `mg2` | Midground layer 2 |
-| `fg1` | Foreground layer 1 |
-| `fg2` | Foreground layer 2 |
-| `slotX` | Named visual insert point |
+| Code    | Meaning                                                                  | Example                                                                    |
+|---------|--------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| `bg`    | Background                                                               | `env_beachday_bg_v1.mp4`                                                   |
+| `mgX`   | Midground layer X (Where X is a number determining the layer hierarchy)  | `env_darklab_mg1_tube-front_v1.webp`,  `env_darklab_mg3_tube-back_v1.webp` |
+| `fgX`   | Foreground layer X (Where X is a number determining the layer hierarchy) | `env_beachday_fg1_luma-matte_v1.mp4`, `env_beachday_fg2_luma-matte_v1.mp4` |
+| `slotX` | Named visual insert point                                                | `env_darklab_slot1_card_darkdragonite_holo_raw.png`                        |
 
 📌 Lower numbers are closer to background. You can define any number of `mgX` or `fgX` layers.
 
 ### Example:
 
-`env_rocketlab_bg_cleanroom_v1.png`
+`env_darklab_bg_cleanroom_v1.png`
 
-`env_rocketlab_mg1_tube_slot2_v1.png`
+`env_darklab_mg1_tube_slot2_v1.png`
 
-`env_rocketlab_mg2_wires_v1.png`
+`env_darklab_mg2_wires_v1.png`
 
-`env_rocketlab_fg1_monitors_v1.png`
+`env_darklab_fg1_monitors_v1.png`
 
-`env_rocketlab_fg2_smoke_v1.png`
+`env_darklab_fg2_smoke_v1.png`
 
 ---
 

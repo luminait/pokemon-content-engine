@@ -23,18 +23,28 @@ Ask the following questions **one at a time**, obeying the response-format rules
 1. **Campaign selection** – “Which campaign(s) is this post for?”  
    - Display: Numbered list of `campaign_ids` in campaign_ids.csv
    - Accept: Either the number or the name of one—and only one—campaign_id.  
-2. **Confirm Character assets** – Assuming the campaign_<campaign_id>.md exists, ask the user to "Select characters from this campaign you wish to omit. Or type skip to move on to the next step.”  
+2. **Select Character assets** – “Which characters from the campaign’s **Character Pool** will appear in this post?  (*Maximum = `max_characters_per_post`*)  
+   - **Display:** A bullet-list of every `asset_id` inside the blueprint’s `## 5. Character Pool`.  
+   - **Accept:** A comma-separated list of chosen asset_ids **≤ `max_characters_per_post`**, or the word `skip` to keep the default set.  
+   - **Error:** If more than the allowed number are provided, reply  
+     `ERROR: Character count exceeds max_characters_per_post`.
+    2.1 **Narrative intent** – “Provide a 3-6-word narrative purpose for **each** character you selected, in the same order.”  
+        - **Accept:** A comma-separated list of intents (e.g., `main nostalgia, comedic cameo, surprise splash`).  
+        - **Error:** If the intent count ≠ selected-character count, reply `ERROR: Intent count mismatch`.
+3. **Environment assets** – “Select scene/environment asset IDs.”  
+   *(Continue with the remainder of the original steps, incrementing their numbers accordingly.)*
+4. **Confirm Character assets** – Assuming the campaign_<campaign_id>.md exists, ask the user to "Select characters from this campaign you wish to omit. Or type skip to move on to the next step.”  
    - Display a **bullet list** of all character IDs listed in `campaign_<campaign_id>.md` document (where<campaign_id> is the campaign id that the user selected in the previous step.
    - Accept:  A comma-separated list of character_ids to omit for this particular post, or "skip" to keep all the existing characters in this post.
-3. **Environment assets** – “Select scene/environment asset IDs.”  
+5. **Environment assets** – “Select scene/environment asset IDs.”  
    - Same listing rule as #2 but filtered to `asset_type == scene`.  
-4. **Target length** – “Confirm the target length (in seconds) for this post”
+6. **Target length** – “Confirm the target length (in seconds) for this post”
    - Display:  the target length listed in  the associated `campaign_<campaign_id>.md` document
    - Accept: 'Yes" or any affirmative response that constitutes a yes reply, or a new target length in seconds that is under 60 seconds.
-5. **Featured Cards** - "Confirm whether this post should feature any cards or should just be content/narrative focused."
+7. **Featured Cards** - "Confirm whether this post should feature any cards or should just be content/narrative focused."
    - Display: Examples of cards that are associated with the kind of post being generated. (e.g. Water-type Pokémon cards for a water-based post, or Dark Pokémon cards for a dark post, such as dark lab)
    - Accept: "None" or words with similar connotations to indicate no featured cards or a comma-separated list of cards to be featured in the post.
-6. **Special Instructions** - "Are there any specific instructions to add for this post?"
+8. **Special Instructions** - "Are there any specific instructions to add for this post?"
    - Display: Examples of specific instructions such as 'Do NOT talk about card releases, just talk about narrative." of "Mention that there are Free giveaways every five minutes."
 
 
@@ -47,16 +57,19 @@ Ask the following questions **one at a time**, obeying the response-format rules
 > 
 
 ## 2 – Generation Steps
-
-1. **Parse Inputs** – extract persona insights; load campaign components.
-2. **Draft Storyboard** – ≤ *duration* in campaign rules.
-3. **Dialog Assignment** – map lines to `char_*.png` IDs & voice files.
-4. **Asset List** – images, voices, music; filenames must follow *Universal Naming Conventions*.
-5. **Caption** – create an optimized caption for social media (see caption rules below).
-5. **Shotstack JSON** – build an edit payload with merge fields and asset URLs. Name file `shotstack_<campaignid>_<postid>_v1.json`.
-6. **Validate** – IDs exist, filename pattern `[prefix]_[subject]_[descriptor]_v\\d+.json`, merge keys match the JSON.
-7. **Output** – one Markdown block **and** the JSON (separate block). Nothing else.
-8. **Captions** - a short caption with appropriate hashtags that are compatible with all social media platforms.
+1. **Parse Inputs** – Load the campaign blueprint, including `## 5. Character Pool`, and resolve any user overrides.
+2. **Draft Storyboard** – Keep total runtime ≤ campaign `duration`.
+3. **Dialog Assignment** – Map dialogue lines to the selected character assets & voice files.
+3a. **Character Narrative Map** – Match each chosen character to a unique `CHAR_*` merge field and attach the user-supplied narrative intent.
+4. **Asset List** – Compile all images, voices, and music; ensure filenames follow *Universal Naming Conventions*.
+5. **Caption** – Generate an optimized, hashtag-ready caption.
+6. **Shotstack JSON** – Build the edit payload, name it `shotstack_<campaignid>_<postid>_v1.json`, and include all merge fields & asset URLs.
+7. **Validate** –  
+   - All selected characters exist in the campaign’s **Character Pool** *or* are clearly flagged as `override`.  
+   - Character count ≤ **`max_characters_per_post`** and each is mapped to a unique `CHAR_*` field.  
+   - Verify IDs exist, filename pattern matches `[prefix]_[subject]_[descriptor]_v\d+.json`, and merge keys align with the JSON.
+8. **Output** – Return one Markdown block **and** the JSON block (fenced separately). Output nothing else.
+9. **Captions** – Re-affirm the short caption with cross-platform-friendly hashtags.
 
 ### Generation Rules
 - The audio will be generated using AI. Try to avoid using words that have two or more potential pronunciations (e.g. "live" can have both a short and long letter 'i')
@@ -112,6 +125,13 @@ Otherwise, if the campaign is narration driven (i.e. no characters are speaking,
 |0:03 s|**char_narrator2**|“Yes it is”|
 |0:06 s|**char_narrator1**, **char_narrator2**|“Come spend the summer with Deez Collectibles and your favorite Pokémon!”|
 
+## Character Narrative Map
+| Merge Field   | Character Asset (selected) | Narrative Intent           |
+|---------------|---------------------------|----------------------------|
+| {{ CHAR_FG1 }} | <asset_id_1>              | <intent_1>                 |
+| {{ CHAR_FG2 }} | <asset_id_2>              | <intent_2>                 |
+<!-- Add/remove rows so total rows = number of selected characters -->
+
 
 ## Caption
 An optimized caption to be used in the associated social media post.
@@ -137,3 +157,4 @@ Return the JSON in a separate json … block immediately after the Markdown.
 - ☑ Tone remains fun, yet professional
 - ☑ Added dialog example & JSON-naming spec
 - ☑ Context & error-prevention triggers resolved
+- ☑ Selected characters are all in the campaign’s **Character Pool** (unless explicitly marked *override*), and total ≤ `max_characters_per_post`.

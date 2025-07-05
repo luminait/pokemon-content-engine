@@ -36,7 +36,13 @@ campaign_beachday_v1.md
 
 ---
 
-## 3. Asset Catalogue  *(IDs from `assets_database.csv`)*
+## 3. Campaign Overview
+- `description`: A vibrant seaside scene where Pikachu and fellow water-type Pokémon soak up the sun, ride the surf, and splash one another. The playful, summery vibe stirs nostalgic memories of beach vacations while spotlighting upcoming aquatic-themed card auctions on WhatNot.  
+- `scene_focal_point`: The crashing shoreline wave where Lapras ferries Pikachu on its shell as Gyarados bursts dramatically from the water behind them.
+
+---
+
+## 4. Asset Catalogue  *(IDs from `assets_database.csv`)*
 
 | Asset_Type | Asset_ID | Description | Storage_URI |
 | ---------- | -------- | ----------- | ----------- |
@@ -53,7 +59,7 @@ campaign_beachday_v1.md
 
 ---
 
-## 4. Voice-Mapping
+## 5. Voice-Mapping
 
 *(No dialog required—fallback voice retained for system compliance.)*
 
@@ -63,7 +69,7 @@ campaign_beachday_v1.md
 
 ---
 
-## 5. Dynamic Elements - Shotstack Merge Fields
+## 6. Dynamic Elements - Shotstack Merge Fields
 
 | Element | Purpose | Input Keys |
 | ------- | ------- | ---------- |
@@ -80,7 +86,7 @@ campaign_beachday_v1.md
 | Background Character - Supporting | Supporting background character that invokes nostalgia | `{{ CHAR_BG2 }}` |
 | Background Character - Quirky | Supporting background character that is fun and quirky | `{{ CHAR_BG3 }}` |
 | Environment Foreground - layer 1| Foreground of the shot | `{{ ENV_FG1 }}` |
-| Environment Foreground - layer 2| Foreground of the shot | `{{ ENV_FG2 }}` |
+| Environment Foreground - layer 2| Foreground[campaign_beachday.md](campaign_blueprint_beachday_v1.md) of the shot | `{{ ENV_FG2 }}` |
 | Environment Midground - layer 1| Midground of the shot | `{{ ENV_MG1 }}` |
 | Environment Midground - layer 2| Midground of the shot | `{{ ENV_MG2 }}` |
 | Environment Background - layer 1| Background of the shot | `{{ ENV_BG1 }}` |
@@ -93,7 +99,7 @@ campaign_beachday_v1.md
 
 ---
 
-## 6. n8n Automation Hooks
+## 7. n8n Automation Hooks
 
 - **6.1 `trigger`**: Monday & Tuesday at 09:00 PT  
 - **6.2 `steps_overview`**  
@@ -104,7 +110,7 @@ campaign_beachday_v1.md
 
 ---
 
-## 7. Validation Checklist
+## 8. Validation Checklist
 
 - ✅ Asset IDs exist in `assets_database.csv`.  
 - ✅ IDs follow `char_*/scene_*/music_*` naming convention where applicable.  
@@ -114,7 +120,7 @@ campaign_beachday_v1.md
 
 ---
 
-## 8. Versioning
+## 9z. Versioning
 
 | Field | Value |
 | ----- | ----- |
