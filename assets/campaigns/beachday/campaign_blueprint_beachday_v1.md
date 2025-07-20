@@ -63,38 +63,38 @@ campaign_beachday_v1.md
 
 *(No dialog required—fallback voice retained for system compliance.)*
 
-| Character_ID | RunwayVoice_ID | Fallback_Voice |
-| ------------ | -------------- | -------------- |
-| narrator | James | voice_generic_001 |
+| Character_ID | RunwayVoice_ID | Fallback_Voice    |
+|--------------|----------------|-------------------|
+| narrator     | James          | voice_generic_001 |
 
 ---
 
 ## 6. Dynamic Elements - Shotstack Merge Fields
 
-| Element | Purpose | Input Keys |
-| ------- | ------- | ---------- |
-| Text overlay | “Spend the summer with us” CTA appears at 00:25 | `{{ FINAL_CTA }}` |
-| Text overlay | N/A | `{{ HEADER_TITLE }}` |
-| Lower-third logo | Deez Collectibles branding | `{logo_png}` |
-| Lower-third information | WhatNot auction Info (Day of the week) | `{{ FOOTER_MESSAGE_1 }}` |
-| Lower-third information | WhatNot auction Info (Time of day) | `{{ FOOTER_MESSAGE_2 }}` |
-| Foreground Character - Featured  | Character that invokes the most nostalgia | `{{ CHAR_FG1 }}` |
-| Foreground Character - Supporting | Aquatic character that invokes the most nostalgia | `{{ CHAR_FG2 }}` |
-| Foreground Character - Quirky | Supporting character that invokes the most nostalgia | `{{ CHAR_FG3 }}` |
-| Foreground Character - Quirky | Supporting character that is fun and quirky | `{{ CHAR_FG4 }}` |
-| Background Character - Featured | Aquatic character that invokes the most nostalgia | `{{ CHAR_BG1 }}` |
-| Background Character - Supporting | Supporting background character that invokes nostalgia | `{{ CHAR_BG2 }}` |
-| Background Character - Quirky | Supporting background character that is fun and quirky | `{{ CHAR_BG3 }}` |
-| Environment Foreground - layer 1| Foreground of the shot | `{{ ENV_FG1 }}` |
-| Environment Foreground - layer 2| Foreground[campaign_beachday.md](campaign_blueprint_beachday_v1.md) of the shot | `{{ ENV_FG2 }}` |
-| Environment Midground - layer 1| Midground of the shot | `{{ ENV_MG1 }}` |
-| Environment Midground - layer 2| Midground of the shot | `{{ ENV_MG2 }}` |
-| Environment Background - layer 1| Background of the shot | `{{ ENV_BG1 }}` |
-| Environment Background - layer 2| Background of the shot | `{{ ENV_BG2 }}` |
-| Music | Background music of the scene | `{{ MUSIC }}` |
-| Voiceover - clip 1 | First Voiceover clip for the scene - Opening catchphrase | `{{ VO_CLIP1 }}` |
-| Voiceover - clip 2 | Second Voiceover clip for the scene - important information about the auction | `{{ VO_CLIP2 }}` |
-| Voiceover - clip 3 | Third and Final Voiceover clip for the scene - tagline | `{{ VO_CLIP3 }}` |
+| Element                           | Purpose                                                                         | Input Keys               |
+|-----------------------------------|---------------------------------------------------------------------------------|--------------------------|
+| Text overlay                      | “Spend the summer with us” CTA appears at 00:25                                 | `{{ FINAL_CTA }}`        |
+| Text overlay                      | N/A                                                                             | `{{ HEADER_TITLE }}`     |
+| Lower-third logo                  | Deez Collectibles branding                                                      | `{logo_png}`             |
+| Lower-third information           | WhatNot auction Info (Day of the week)                                          | `{{ FOOTER_MESSAGE_1 }}` |
+| Lower-third information           | WhatNot auction Info (Time of day)                                              | `{{ FOOTER_MESSAGE_2 }}` |
+| Foreground Character - Featured   | Character that invokes the most nostalgia                                       | `{{ CHAR_FG1 }}`         |
+| Foreground Character - Supporting | Aquatic character that invokes the most nostalgia                               | `{{ CHAR_FG2 }}`         |
+| Foreground Character - Quirky     | Supporting character that invokes the most nostalgia                            | `{{ CHAR_FG3 }}`         |
+| Foreground Character - Quirky     | Supporting character that is fun and quirky                                     | `{{ CHAR_FG4 }}`         |
+| Background Character - Featured   | Aquatic character that invokes the most nostalgia                               | `{{ CHAR_BG1 }}`         |
+| Background Character - Supporting | Supporting background character that invokes nostalgia                          | `{{ CHAR_BG2 }}`         |
+| Background Character - Quirky     | Supporting background character that is fun and quirky                          | `{{ CHAR_BG3 }}`         |
+| Environment Foreground - layer 1  | Foreground of the shot                                                          | `{{ ENV_FG1 }}`          |
+| Environment Foreground - layer 2  | Foreground[campaign_beachday.md](campaign_blueprint_beachday_v1.md) of the shot | `{{ ENV_FG2 }}`          |
+| Environment Midground - layer 1   | Midground of the shot                                                           | `{{ ENV_MG1 }}`          |
+| Environment Midground - layer 2   | Midground of the shot                                                           | `{{ ENV_MG2 }}`          |
+| Environment Background - layer 1  | Background of the shot                                                          | `{{ ENV_BG1 }}`          |
+| Environment Background - layer 2  | Background of the shot                                                          | `{{ ENV_BG2 }}`          |
+| Music                             | Background music of the scene                                                   | `{{ MUSIC }}`            |
+| Voiceover - clip 1                | First Voiceover clip for the scene - Opening catchphrase                        | `{{ VO_CLIP1 }}`         |
+| Voiceover - clip 2                | Second Voiceover clip for the scene - important information about the auction   | `{{ VO_CLIP2 }}`         |
+| Voiceover - clip 3                | Third and Final Voiceover clip for the scene - tagline                          | `{{ VO_CLIP3 }}`         |
 
 
 ---

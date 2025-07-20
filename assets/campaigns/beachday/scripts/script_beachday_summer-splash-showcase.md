@@ -24,12 +24,7 @@ music:
 4. Closing overlay **{{ FINAL_CTA }}** appears at 0 : 28 s  
 Footer: “Catch the live WhatNot auction – **{{ DATE_TIME }}**”
 
-## Dialog
-| Time | Character (asset) | Line |
-|------|-------------------|------|
-|0:00 s|**char_narrator1**|“Surf’s up, Trainers!”|
-|0:12 s|**char_narrator1**|“Iconic Water-type cards and more are dropping now.”|
-|0:24 s|**char_narrator1**|“Spend the summer with us! Bid live on WhatNot!”|
+-
 
 ## Build Instructions
 Generate a Shotstack edit JSON named  

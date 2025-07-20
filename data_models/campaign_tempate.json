@@ -1,0 +1,94 @@
+{
+  "version_number": "1.0",
+  "campaign_id": "",
+  "title": "",
+  "target_personas": [
+    {
+      "persona_id": "nostalgic_collector",
+      "persona_file": "persona_Nostalgic_Collector.md",
+      "key_motivators": []
+    },
+    {
+      "persona_id": "hardcore_collector",
+      "persona_file": "persona_Hardcore_Collector.md",
+      "key_motivators": []
+    },
+    {
+      "persona_id": "status_seeker",
+      "persona_file": "persona_Status_Seeker.md",
+      "key_motivators": []
+    }
+  ],
+  "objective": "",
+  "target_post_length": 30,
+  "max_characters_per_post": 5,
+  "cadence": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+  "campaign_overview": {
+    "description": "",
+    "scene_focal_point": ""
+  },
+  "asset_catalogue": [
+    {
+      "asset_type": "scene",
+      "asset_id": "",
+      "description": "",
+      "storage_uri": ""
+    },
+    {
+      "asset_type": "character",
+      "asset_id": "",
+      "description": "",
+      "storage_uri": ""
+    },
+    {
+      "asset_type": "music",
+      "asset_id": "",
+      "description": "",
+      "storage_uri": ""
+    }
+  ],
+  "character_pool": [
+    {
+      "asset_id": "",
+      "narrative_role": "",
+      "recommended_scene": "",
+      "notes": ""
+    }
+  ],
+  "voice_mapping": [
+    {
+      "character_id": "",
+      "runway_voice_id": "",
+      "fallback_voice": ""
+    }
+  ],
+  "dynamic_elements": [
+    {
+      "element": "",
+      "purpose": "",
+      "input_keys": []
+    }
+  ],
+  "n8n_automation_hooks": {
+    "trigger": "",
+    "steps_overview": [
+      "Parse this template",
+      "Generate voices via Runway.ai or ElevenLabs.io",
+      "Assemble Shotstack edit",
+      "Publish to Instagram, Facebook, and TikTok"
+    ]
+  },
+  "validation_checklist": [
+    "IDs follow naming conventions",
+    "Voice table complete or fallback present",
+    "Asset links resolve (HTTP 200)",
+    "Shotstack preview passes without errors",
+    "Number of characters referenced in each post ≤ max_characters_per_post",
+    "Character Pool table present & fully populated",
+    "Row count ≤ max_characters_per_post"
+  ],
+  "version": "v1.0",
+  "changelog": [
+    "v1.0 – Initial template"
+  ]
+}
