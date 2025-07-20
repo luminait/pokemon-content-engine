@@ -39,14 +39,14 @@
 
 ## Engine Resources
 
-- **Customer Personas** (`content-engine/resources/customer_personas/`)
+- **Customer Personas** (`/resources/customer_personas/`)
   - `customer_persona_Hardcore_Collector.md`
   - `customer_persona_Nostalgic_Collector.md`
   - `customer_persona_Status_Seeker.md`
-- **Templates** (`content-engine/resources/templates/`)
+- **Templates** (`/resources/templates/`)
   - `campaign_blueprint_template.md`
   - `post_template.md`
-- **Prompts** (`content-engine/resources/prompts/`)
+- **Prompts** (`/resources/prompts/`)
   - `campaign_generator.md`
   - `post_generator.md`
 
