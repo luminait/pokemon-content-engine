@@ -1,0 +1,29 @@
+[
+  {
+    "campaign_id": "beachday",
+    "title": "Summer Splash Showcase",
+    "objective": "Drive engagement and auction participation by tapping millennial beach-day nostalgia and showcasing iconic Water-type Pokémon.",
+    "personas": "[\"nostalgic_collector\", \"hardcore_collector\"]",
+    "target_post_length": 30,
+    "cadence": "[\"monday\", \"tuesday\"]",
+    "campaign_blueprint": "campaign_blueprint_beachday.md"
+  },
+  {
+    "campaign_id": "darkvault",
+    "title": "Dark Vault",
+    "objective": "Drive engagement by inviting nostalgic collectors to uncover rare Dark-type Pokémon cards hidden in the ‘vault.’",
+    "personas": "[\"nostalgic_collector\"]",
+    "target_post_length": 45,
+    "cadence": "[\"wednesday\", \"thursday\", \"friday\"]",
+    "campaign_blueprint": "campaign_blueprint_darkvault_v1.md"
+  },
+  {
+    "campaign_id": "darklab",
+    "title": "Secrets of the Dark Lab",
+    "objective": "Drive nostalgic collectors to join Saturday at 2pm PST by showcasing vintage Rocket & Base Set cards in a mysterious laboratory setting.",
+    "personas": "[\"nostalgic_collector\"] ",
+    "target_post_length": 45,
+    "cadence": "[\"friday\"]",
+    "campaign_blueprint": "campaign_blueprint__darklab_v1"
+  }
+]
