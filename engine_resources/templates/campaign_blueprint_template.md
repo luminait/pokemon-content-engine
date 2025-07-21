@@ -68,37 +68,23 @@ campaign_blueprint_template.md – v<version_number>
 
 ---
 
-## 7. Dynamic Elements - Shotstack Merge Fields
+## 7. Dynamic Elements & Timeline (EDL)
 
-Describe any runtime-generated elements (e.g., price overlays) and required input keys.
+This table maps Shotstack merge fields to their specific timing and purpose in the video timeline. This is the **Edit Decision List (EDL)** that the `post_generator` agent must follow. All times are in seconds.
 
-Example:
-
-| Element                           | Purpose                                                                       | Input Keys               |
-|-----------------------------------|-------------------------------------------------------------------------------|--------------------------|
-| Text overlay                      | “Spend the summer with us” CTA appears at 00:25                               | `{{ FINAL_CTA }}`        |
-| Text overlay                      | N/A                                                                           | `{{ HEADER_TITLE }}`     |
-| Lower-third logo                  | Deez Collectibles branding                                                    | `{logo_png}`             |
-| Lower-third information           | WhatNot auction Info (Day of the week)                                        | `{{ FOOTER_MESSAGE_1 }}` |
-| Lower-third information           | WhatNot auction Info (Time of day)                                            | `{{ FOOTER_MESSAGE_2 }}` |
-| Foreground Character - Featured   | Character that invokes the most nostalgia                                     | `{{ CHAR_FG1 }}`         |
-| Foreground Character - Supporting | Aquatic character that invokes the most nostalgia                             | `{{ CHAR_FG2 }}`         |
-| Foreground Character - Quirky     | Supporting character that invokes the most nostalgia                          | `{{ CHAR_FG3 }}`         |
-| Foreground Character - Quirky     | Supporting character that is fun and quirky                                   | `{{ CHAR_FG4 }}`         |
-| Background Character - Featured   | Aquatic character that invokes the most nostalgia                             | `{{ CHAR_BG1 }}`         |
-| Background Character - Supporting | Supporting background character that invokes nostalgia                        | `{{ CHAR_BG2 }}`         |
-| Background Character - Quirky     | Supporting background character that is fun and quirky                        | `{{ CHAR_BG3 }}`         |
-| Environment Foreground - layer 1  | Foreground of the shot                                                        | `{{ ENV_FG1 }}`          |
-| Environment Foreground - layer 2  | Foreground of the shot                                                        | `{{ ENV_FG2 }}`          |
-| Environment Midground - layer 1   | Midground of the shot                                                         | `{{ ENV_MG1 }}`          |
-| Environment Midground - layer 2   | Midground of the shot                                                         | `{{ ENV_MG2 }}`          |
-| Environment Background - layer 1  | Background of the shot                                                        | `{{ ENV_BG1 }}`          |
-| Environment Background - layer 2  | Background of the shot                                                        | `{{ ENV_BG2 }}`          |
-| Music                             | Background music of the scene                                                 | `{{ MUSIC }}`            |
-| Voiceover - clip 1                | First Voiceover clip for the scene - Opening catchphrase                      | `{{ VO_CLIP1 }}`         |
-| Voiceover - clip 2                | Second Voiceover clip for the scene - important information about the auction | `{{ VO_CLIP2 }}`         |
-| Voiceover - clip 3                | Third and Final Voiceover clip for the scene - tagline                        | `{{ VO_CLIP3 }}`         |
-
+| Merge Field        | Start (s) | Length (s) | Purpose                                                                       |
+|--------------------|-----------|------------|-------------------------------------------------------------------------------|
+| `{{ HEADER_TITLE }}` | 0.0       | 3.98       | The main title of the post. Appears at the beginning.                         |
+| `{{ VO_CLIP1 }}`     | 4.23      | 2.86       | First Voiceover clip for the scene - Opening catchphrase.                     |
+| `{{ VO_CLIP2 }}`     | 10.67     | 4.0        | Second Voiceover clip for the scene - Auction information.                    |
+| `{{ VO_CLIP3 }}`     | 15.62     | 6.69       | Third Voiceover clip for the scene - Tagline.                                 |
+| `{{ CHAR_FG1 }}`     | 4.0       | 3.0        | Primary foreground character.                                                 |
+| `{{ CHAR_FG2 }}`     | 4.0       | 3.0        | Supporting foreground character.                                              |
+| `{{ SLOT_1 }}`       | 7.0       | 10.0       | Placeholder for the first featured card.                                      |
+| `{{ SLOT_2 }}`       | 10.0      | 11.0       | Placeholder for the second featured card.                                     |
+| `{{ SLOT_3 }}`       | 16.0      | 12.76      | Placeholder for the third featured card.                                      |
+| `{{ FINAL_CTA }}`    | 28.5      | end        | Final call-to-action text overlay.                                            |
+| `{{ MUSIC }}`        | 0.0       | end        | Background music for the entire post.                                         |
 
 ▸ The total number of `CHAR_*` merge fields shown above sets the limit enforced by `max_characters_per_post`.
 
@@ -111,7 +97,7 @@ Example:
 8.2 `steps_overview`:
 
 1. Parse this template
-2. Generate voices via [Runway.ai](http://runway.ai/) for custom voices or [ElevenLabs.io](https://elevenlabs.io/)
+2. Generate voices via Runway.ai for custom voices or ElevenLabs.io
 3. Assemble Shotstack edit
 4. Publish to Instagram, Facebook, and TikTok
 
